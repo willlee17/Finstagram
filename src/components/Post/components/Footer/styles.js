@@ -14,6 +14,17 @@ const styles = StyleSheet.create({
     },
     caption: {
       margin: 3
+    },
+    icon: {
+      margin: 5,
+      marginRight: 12
+    },
+    iconsContainer: {
+      flexDirection: "row",
+      justifyContent: "space-between"
+    }, 
+    leftIcons: {
+      flexDirection: "row"
     }
 })
 

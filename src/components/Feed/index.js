@@ -5,6 +5,7 @@ import Stories from '../Stories'
 
 const data = [
   {
+    id: '1',
     user: {
       image: require('../../assets/images/randomdude.jpeg'),
       name: 'Joel'
@@ -15,6 +16,7 @@ const data = [
     postedAt: '1 hour ago', 
   },
   {
+    id: '2',
     user: {
       image: require('../../assets/images/randomLady2.jpeg'),
       name: 'Diana'
@@ -25,6 +27,7 @@ const data = [
     postedAt: '3 hours ago', 
   },
   {
+    id: '3',
     user: {
       image: require('../../assets/images/randomGuy4.jpeg'),
       name: 'Michael'
@@ -35,6 +38,7 @@ const data = [
     postedAt: '3 hours ago', 
   },
   {
+    id: '4',
     user: {
       image: require('../../assets/images/randomLady4.jpeg'),
       name: 'Elizabeth'
@@ -51,6 +55,7 @@ const Feed = () => {
     <FlatList 
       data={data}
       renderItem={({item}) => <Post post={item} />}
+      keyExtractor={({id}) => id}
       ListHeaderComponent={<Stories />}
     />
   )

@@ -4,9 +4,9 @@ const styles = StyleSheet.create({
   name: {
     textAlign: "center"
   },
-  // storyContainer: {
-  //   width: 
-  // }
+  storyContainer: {
+    flexDirection: "column", 
+  }
 })
 
 export default styles;

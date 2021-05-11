@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableWithoutFeedback } from 'react-native'
+import { Text, View, Pressable } from 'react-native'
 import styles from './styles';
 import ADIcon from 'react-native-vector-icons/dist/AntDesign';
 import FontistoIcon from 'react-native-vector-icons/dist/Fontisto';
@@ -18,22 +18,23 @@ const Footer = ({ likesCount: likesCountProps, postedAt, caption }) => {
   const onLikedPressed = () => {
     setIsLiked(!isLiked);
     const liked = !!isLiked  ? -1 : 1
-    console.log('isLiked: ', isLiked)
     setLikesCount(likesCount + liked)
   }
 
   return (
     <View style={styles.footerContainer}>
+
       <View style={styles.iconsContainer}>
+
         <View style={styles.leftIcons}>
-          <TouchableWithoutFeedback onPress={onLikedPressed}>
+          <Pressable onPress={onLikedPressed}>
             { !isLiked ? 
               <ADIcon style={styles.icon} name="hearto" size={25} color={"#545454"}/> 
               : 
               <ADIcon style={styles.icon} name="heart" size={25} color={"#e73838"}/> 
             }
             
-          </TouchableWithoutFeedback>
+          </Pressable>
           
           <FontistoIcon style={styles.icon} name="comment" size={23} color={"#545454"} />
           <IoniconsIcon style={styles.icon} name="paper-plane-outline" size={24} color={"#545454"} />
@@ -42,6 +43,7 @@ const Footer = ({ likesCount: likesCountProps, postedAt, caption }) => {
         <View style={styles.rightIcons}>
            <FAIcon  style={styles.icon} name="bookmark-o" size={25} color={"#545454"}/>
         </View>
+        
       </View>
 
 

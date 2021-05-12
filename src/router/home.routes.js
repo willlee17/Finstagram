@@ -6,6 +6,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { createStackNavigator } from '@react-navigation/stack';
+import StoryScreen from '../screens/StoryScreen';
 
 const HomeStack = createStackNavigator();
 
@@ -24,7 +25,7 @@ const HomeRoutes = () => {
             marginLeft: 15
           },
           headerTitle: () => (
-            <Image source={require('../assets/logo.png')} resizeMode="contain" style={{width: 135 }}/>
+            <Image source={require('../assets/logo.png')} resizeMode="contain" style={{width: 135, height: 50 }}/>
           ),
           headerRight: () => (
               <Ionicons name="paper-plane-outline" size={25} color={"#545454"} />
@@ -34,6 +35,7 @@ const HomeRoutes = () => {
           },
         }} 
       />
+   
   </HomeStack.Navigator>
   )
 }
